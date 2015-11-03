@@ -113,6 +113,10 @@ public class cm
     	createEntity(CustomMob.class, "CustomMob", 0x00FF00, 0xFF0000);
     	createEntity(CatCow.class, "CatCow", 0x000000, 0xFFFFFF);
     	createEntity(GiantSkeleton.class, "GiantSkeleton", 0xFFF000, 0x000FFF);
+
+		if (event.getSide().isClient()){
+			ModelBakery.addVariantName(Item.getItemFromBlock(BlockManager.bitBlock), "cm:BitBlock0", "cm:BitBlock1", "cm:BitBlock2", "cm:BitBlock3", "cm:BitBlock4", "cm:BitBlock5", "cm:BitBlock6", "cm:BitBlock7", "cm:BitBlock8", "cm:BitBlock9", "cm:BitBlock10", "cm:BitBlock11", "cm:BitBlock12", "cm:BitBlock13", "cm:BitBlock14", "cm:BitBlock15");
+		}
     }
     @EventHandler
     public void init(FMLInitializationEvent event)
